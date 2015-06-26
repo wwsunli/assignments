@@ -207,7 +207,7 @@ namespace SRSDEMO.UI
             // Semester is finished (boy, that was quick!).  Professors
             // assign grades.
 
-            sec1.PostGrade(s1, "C+");
+            sec1.PostGrade(s1, "F");
             sec1.PostGrade(s3, "A");
             sec2.PostGrade(s2, "B+");
             sec7.PostGrade(s2, "A-");
@@ -259,6 +259,22 @@ namespace SRSDEMO.UI
             scheduleOfClasses1.AddSection(sec2_3);
             scheduleOfClasses1.AddSection(sec2_4);
             scheduleOfClasses1.AddSection(sec2_5);
+            
+            //设定每门课的教师
+            // Recruit a professor to teach each of the sections.
+
+            p3.AgreeToTeach(sec2_1);
+            p2.AgreeToTeach(sec2_2);
+            p1.AgreeToTeach(sec2_3);
+            p3.AgreeToTeach(sec2_4);
+            p1.AgreeToTeach(sec2_5);
+          
+
+            Console.WriteLine("Student registration has begun!");
+            Console.WriteLine("");
+
+            //模拟学生选课
+            // Students drop/add courses.
 
             //题2：让s1选sec2
             EnrollFlags result = sec2_1.Enroll(s1);
