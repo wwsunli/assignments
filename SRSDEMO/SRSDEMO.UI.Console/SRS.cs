@@ -246,10 +246,20 @@ namespace SRSDEMO.UI
 
             //练习14.2
             Section sec2_1, sec2_2, sec2_3, sec2_4, sec2_5;
-            sec2_1 = c1.ScheduleSection("M", "8:10 - 10:00 PM", "GOVT101", 30);
-            sec2_1 = c1.ScheduleSection("W", "6:10 - 8:00 PM", "GOVT202", 30);
-            scheduleOfClasses1.AddSection(sec1);
-            scheduleOfClasses1.AddSection(sec2);
+            
+            sec2_1 = c1.ScheduleSection("M", "8:00 - 10:00 PM", "GOVT101", 30);
+            sec2_2 = c2.ScheduleSection("Th", "4:00 - 6:00 PM", "GOVT105", 25);
+            sec2_3 = c3.ScheduleSection("W", "6:00 - 8:00 PM", "GOVT101", 20);
+            sec2_4 = c4.ScheduleSection("Th", "4:00 - 6:00 PM", "SCI241", 15);
+            sec2_5 = c5.ScheduleSection("F", "4:00 - 6:00 PM", "ARTS25", 40);
+            
+
+            scheduleOfClasses1.AddSection(sec2_1);
+            scheduleOfClasses1.AddSection(sec2_2);
+            scheduleOfClasses1.AddSection(sec2_3);
+            scheduleOfClasses1.AddSection(sec2_4);
+            scheduleOfClasses1.AddSection(sec2_5);
+
             //题2：让s1选sec2
             EnrollFlags result = sec2_1.Enroll(s1);
 
