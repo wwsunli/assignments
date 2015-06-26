@@ -92,6 +92,24 @@ public class PasswordForm : Form {
       this.Visible = false;
   }
 
+  private void InitializeComponent()
+  {
+            this.SuspendLayout();
+            // 
+            // PasswordForm
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "PasswordForm";
+            this.Load += new System.EventHandler(this.PasswordForm_Load);
+            this.ResumeLayout(false);
+
+  }
+
+  private void PasswordForm_Load(object sender, EventArgs e)
+  {
+      //test1
+  }
+
   //******************
   // Test scaffold
   //
