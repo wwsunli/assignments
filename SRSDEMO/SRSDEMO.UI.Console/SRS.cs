@@ -274,16 +274,22 @@ namespace SRSDEMO.UI
             Console.WriteLine("");
 
             //模拟学生选课
-            // Students drop/add courses.
+          
 
-            //题2：让s1选sec2
+            //题1：让s1选sec2
             EnrollFlags result = sec2_1.Enroll(s1);
 
 
-            //题3：
+            //题2：
+            // 建立课程间的先修关系,自己不能是自己的先修课 (c1 > c2 > c3 > c4).
+
+            c2.AddPrerequisite(c1);
+            c3.AddPrerequisite(c2);
+            c4.AddPrerequisite(c3);
 
 
-            //题4：
+            //题3：确保一个教授不在同一时刻教授不同课程
+
 
             //题5
 
